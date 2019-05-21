@@ -1,0 +1,245 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-primary: #E0E0E0;
+    --color-second: #CBCBCB;
+    --color-thrid: #888888;
+}
+body{
+    background-color: pink;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cable{
+    width: 15px;
+    height: 195px;
+    position: absolute;
+    top: 0;
+}
+.cable::before{
+    content: "";
+    width: 125px;
+    height: 10px;
+    background-color: var(--color-primary);
+    position: absolute;
+    top: 185px;
+    left: 75px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.cable::after{
+    content: "";
+    width: 125px;
+    height: 10px;
+    background-color: var(--color-primary);
+    position: absolute;
+    top: 185px;
+    left: -190px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.container-control{
+    width: 600px;
+    height: 250px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.control-medium{
+    width: 380px;
+    height: 180px;
+    background-color: var(--color-primary);
+    position: absolute;
+    top: 1px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: -1;
+}
+.circle-left,
+.circle-right{
+    height: 250px;
+    width: 250px;
+    background-color: var(--color-primary);
+    position: absolute;
+    top: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle-left{
+    left: 0;
+}
+.circle-right{
+    right: 0;
+}
+h4{
+    font-family: sans-serif;
+    font-size: 15px;
+    margin-top: 5px;
+}
+h5{
+    font-family: sans-serif;
+    font-size: 12px;
+    background-color: #000000;
+    color: #ffffff;
+}
+.p-1,
+.p-2{
+    position: absolute;
+    bottom: 10px;
+    font-size: 3px;
+}
+.p-1{
+    left: 140px;
+}
+.p-2{
+    left: 200px;
+}
+.button-option-select,
+.button-option-start{
+    width: 7px;
+    height: 25px;
+    position: absolute;
+    background-color: #454545;
+    bottom: 27px;
+    transform: rotate(30deg);
+    border-radius: 3px;
+    bottom: 25px;
+}
+.button-option-select{
+    left: 165px;
+}
+.button-option-start{
+    left: 220px;
+}
+.circle-control-left{
+    width: 175px;
+    height: 175px;
+    background-color: var(--color-second);
+    z-index: 10;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-y{
+    width: 35px;
+    height: 125px;
+    background-color: #454545;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.fa-caret-up,
+.fa-caret-down,
+.fa-caret-left,
+.fa-caret-right{
+    color: #646464;
+    position: absolute;
+    font-size: 30px;
+}
+.fa-caret-up{
+    top: 5px;
+}
+.fa-caret-down{
+    bottom: 5px;
+}
+.fa-caret-left{
+    left: 5px;
+}
+.fa-caret-right{
+    right: 5px;
+}
+.button-x{
+    width: 125px;
+    height: 35px;
+    background-color: #454545;
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+}
+.circle-control-right{
+    width: 200px;
+    height: 200px;
+    background-color: var(--color-thrid);
+    z-index: 10;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Button-top,
+.Button-bottom{
+    width: 125px;
+    height: 40px;
+    background-color: #E6E6E6;
+    border-radius: 20px;
+    transform: rotate(-38deg);
+    position: absolute;
+}
+.Button-top{
+    top: 60px;
+    left: 25px;
+}
+.Button-bottom{
+    top: 110px;
+    left: 65px;
+}
+.Button-top::before,
+.Button-top::after{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 2.5px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+.Button-top::before{
+    content: "Y";
+    background-color: #B00831;
+    left: 5px;
+}
+.Button-top::after{
+    content: "X";
+    right: 5px;
+    background-color: #5D00F6;
+}
+.Button-bottom::before,
+.Button-bottom::after{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 2px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+.Button-bottom::before{
+    content: "B";
+    left: 5px;
+    background-color: #DDCC03;
+}
+.Button-bottom::after{
+    right: 5px;
+    background-color: #00891C;
+    content: "A";
+}
